@@ -1,2 +1,2 @@
 server.servlet.context-path: /backend
-management.endpoints.web.base-path: /backend/actuator
+management.endpoints.web.base-path: /actuator

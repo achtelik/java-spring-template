@@ -1,11 +1,13 @@
-package it.achtelik.javaspringtemplate.message.inadapters;
+package it.achtelik.javaspringtemplate.messages.inadapters;
 
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
-@RestController("messages")
+@RestController
+@RequestMapping("messages")
 public class MessageController {
 
     @PutMapping()
