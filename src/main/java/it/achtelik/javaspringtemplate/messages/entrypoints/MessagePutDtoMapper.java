@@ -14,4 +14,8 @@ class MessagePutDtoMapper {
                 "", userIp, Instant.now(), "",
                 userIp);
     }
+
+    public MessagePutResultDto toResultDto(Message message) {
+        return new MessagePutResultDto(message.uuid());
+    }
 }

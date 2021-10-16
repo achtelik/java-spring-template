@@ -14,19 +14,25 @@ public class MessageController {
 
     private final MessageRepositoryAdapter messageRepositoryAdapter;
     private final MessagePutDtoMapper messagePutDtoMapper;
+    private final MessageGetDtoMapper messageGetDtoMapper;
 
-    public MessageController(MessageRepositoryAdapter messageRepositoryAdapter, MessagePutDtoMapper messagePutDtoMapper) {
+    public MessageController(MessageRepositoryAdapter messageRepositoryAdapter, MessagePutDtoMapper messagePutDtoMapper,
+                             MessageGetDtoMapper messageGetDtoMapper) {
         this.messageRepositoryAdapter = messageRepositoryAdapter;
         this.messagePutDtoMapper = messagePutDtoMapper;
+        this.messageGetDtoMapper = messageGetDtoMapper;
     }
 
     @PutMapping()
-    public Mono<Message> putMessage(@RequestBody MessagePutDto messagePutDto, HttpServletRequest request) {
-        return messageRepositoryAdapter.save(messagePutDtoMapper.toMessage(messagePutDto, request.getRemoteAddr()));
+    public Mono<MessagePutResultDto> putMessage(@RequestBody MessagePutDto messagePutDto, HttpServletRequest request) {
+        Mono<Message> result = messageRepositoryAdapter.save(messagePutDtoMapper
+                .toMessage(messagePutDto, request.getRemoteAddr()));
+        return result.flatMap(message -> Mono.just(messagePutDtoMapper.toResultDto(message)));
     }
 
     @GetMapping()
-    public Flux<Message> getMessage() {
-        return messageRepositoryAdapter.findAll();
+    public Flux<MessageGetResultDto> getMessage() {
+        Flux<Message> results = messageRepositoryAdapter.findAll();
+        return results.flatMap(message -> Flux.just(messageGetDtoMapper.toResultDto(message)));
     }
 }
