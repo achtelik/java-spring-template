@@ -1,2 +1,8 @@
 server.servlet.context-path: /backend
 management.endpoints.web.base-path: /actuator
+
+spring.data.mongodb:
+  host: localhost
+  port: 27017
+  username: admin
+  password: password
