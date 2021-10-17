@@ -1,4 +1,4 @@
 Hi
 
 * Swagger: http://localhost:8080/backend/swagger-ui.html
-* Actuator: http://localhost:8080/backend/actuator
+* Actuator: Swagger: http://localhost:8080/backend/actuator
