@@ -6,3 +6,5 @@ spring.data.mongodb:
   port: 27017
   username: admin
   password: password
+
+mongock.change-logs-scan-package: it.achtelik.javaspringtemplate.dbmigration
