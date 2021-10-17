@@ -4,7 +4,9 @@ management.endpoints.web.base-path: /actuator
 spring.data.mongodb:
   host: localhost
   port: 27017
+  database: admin
   username: admin
   password: password
 
-mongock.change-logs-scan-package: it.achtelik.javaspringtemplate.dbmigration
+
+mongock.change-logs-scan-package: it.achtelik.javaspringtemplate.commons.dbmigration.application
