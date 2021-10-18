@@ -1,12 +1,13 @@
-package it.achtelik.javaspringtemplate.messages.dataproviders;
+package it.achtelik.javaspringtemplate.messages.dataproviders.mongo;
 
-import it.achtelik.javaspringtemplate.messages.domain.Message;
+import it.achtelik.javaspringtemplate.messages.domain.services.IMessageRepositoryAdapter;
+import it.achtelik.javaspringtemplate.messages.domain.models.Message;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
-public class MessageRepositoryAdapter {
+public class MessageRepositoryAdapter implements IMessageRepositoryAdapter {
     private final MessageRepository messageRepository;
     private final MessageMapper messageMapper;
 

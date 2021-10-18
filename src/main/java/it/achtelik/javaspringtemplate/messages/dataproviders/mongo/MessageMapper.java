@@ -1,6 +1,6 @@
-package it.achtelik.javaspringtemplate.messages.dataproviders;
+package it.achtelik.javaspringtemplate.messages.dataproviders.mongo;
 
-import it.achtelik.javaspringtemplate.messages.domain.Message;
+import it.achtelik.javaspringtemplate.messages.domain.models.Message;
 import org.springframework.stereotype.Component;
 
 @Component

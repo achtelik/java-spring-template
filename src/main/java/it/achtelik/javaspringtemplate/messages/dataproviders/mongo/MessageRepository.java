@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.messages.dataproviders;
+package it.achtelik.javaspringtemplate.messages.dataproviders.mongo;
 
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;

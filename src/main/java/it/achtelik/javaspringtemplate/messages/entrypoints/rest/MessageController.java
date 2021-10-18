@@ -1,7 +1,7 @@
-package it.achtelik.javaspringtemplate.messages.entrypoints;
+package it.achtelik.javaspringtemplate.messages.entrypoints.rest;
 
-import it.achtelik.javaspringtemplate.messages.dataproviders.MessageRepositoryAdapter;
-import it.achtelik.javaspringtemplate.messages.domain.Message;
+import it.achtelik.javaspringtemplate.messages.domain.services.IMessageRepositoryAdapter;
+import it.achtelik.javaspringtemplate.messages.domain.models.Message;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("messages")
 public class MessageController {
 
-    private final MessageRepositoryAdapter messageRepositoryAdapter;
+    private final IMessageRepositoryAdapter messageRepositoryAdapter;
     private final MessagePutDtoMapper messagePutDtoMapper;
     private final MessageGetDtoMapper messageGetDtoMapper;
 
-    public MessageController(MessageRepositoryAdapter messageRepositoryAdapter, MessagePutDtoMapper messagePutDtoMapper,
+    public MessageController(IMessageRepositoryAdapter messageRepositoryAdapter, MessagePutDtoMapper messagePutDtoMapper,
                              MessageGetDtoMapper messageGetDtoMapper) {
         this.messageRepositoryAdapter = messageRepositoryAdapter;
         this.messagePutDtoMapper = messagePutDtoMapper;

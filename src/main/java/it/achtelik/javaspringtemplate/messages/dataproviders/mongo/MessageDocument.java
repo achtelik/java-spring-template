@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.messages.dataproviders;
+package it.achtelik.javaspringtemplate.messages.dataproviders.mongo;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
