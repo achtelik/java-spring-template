@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("messages")
+@RequestMapping("/v1/messages")
 public class MessageController {
 
     private final IMessageRepositoryAdapter messageRepositoryAdapter;
