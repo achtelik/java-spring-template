@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.messages.domain.models;
+package it.achtelik.javaspringtemplate.modules.messages.domain.models;
 
 import java.time.Instant;
 

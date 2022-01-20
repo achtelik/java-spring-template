@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.messages.entrypoints.rest;
+package it.achtelik.javaspringtemplate.modules.messages.entrypoints.rest;
 
 import java.time.Instant;
 

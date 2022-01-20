@@ -1,6 +1,6 @@
-package it.achtelik.javaspringtemplate.messages.entrypoints.rest;
+package it.achtelik.javaspringtemplate.modules.messages.entrypoints.rest;
 
-import it.achtelik.javaspringtemplate.messages.domain.models.Message;
+import it.achtelik.javaspringtemplate.modules.messages.domain.models.Message;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
