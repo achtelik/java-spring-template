@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.archunit;
+package it.achtelik.javaspringtemplate.test.archunit;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;

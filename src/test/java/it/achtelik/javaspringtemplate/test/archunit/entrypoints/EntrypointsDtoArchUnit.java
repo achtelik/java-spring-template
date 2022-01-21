@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.archunit.entrypoints;
+package it.achtelik.javaspringtemplate.test.archunit.entrypoints;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 
