@@ -7,7 +7,7 @@ import java.time.Instant;
 
 @Document
 record MessageDocument(
-        @Id String uuid, String contentEncoded, boolean hide,
+        @Id String uuid, String channel, String content, boolean hide,
         Instant createdAt, String creatorUuid, String creatorIp,
         Instant modifiedAt, String modifierUuid, String modifierIp) {
 }

@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/v1/messages")
-public class MessageController {
+public class MessageRestController {
 
     private final IMessageRepositoryAdapter messageRepositoryAdapter;
     private final MessagePutDtoMapper messagePutDtoMapper;
     private final MessageGetDtoMapper messageGetDtoMapper;
 
-    public MessageController(IMessageRepositoryAdapter messageRepositoryAdapter, MessagePutDtoMapper messagePutDtoMapper,
-                             MessageGetDtoMapper messageGetDtoMapper) {
+    public MessageRestController(IMessageRepositoryAdapter messageRepositoryAdapter, MessagePutDtoMapper messagePutDtoMapper,
+                                 MessageGetDtoMapper messageGetDtoMapper) {
         this.messageRepositoryAdapter = messageRepositoryAdapter;
         this.messagePutDtoMapper = messagePutDtoMapper;
         this.messageGetDtoMapper = messageGetDtoMapper;

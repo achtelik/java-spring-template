@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 class MessageGetDtoMapper {
 
     public MessageGetResultDto toResultDto(Message message) {
-        return new MessageGetResultDto(message.uuid(), message.contentEncoded(), message.createdAt(),
+        return new MessageGetResultDto(message.uuid(), message.content(), message.createdAt(),
                 message.creatorUuid(), message.modifiedAt(), message.modifierUuid());
     }
 }

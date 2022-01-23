@@ -43,6 +43,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
         </dependency>
+        <!-- Module specific usecases -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.14.3</version>
+        </dependency>
         <!-- Start: Necessary for mongodb migration -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -65,7 +71,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.5.11</version>
+            <version>1.6.3</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -94,7 +100,7 @@
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
             <artifactId>archunit-junit5</artifactId>
-            <version>0.21.0</version>
+            <version>0.22.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
