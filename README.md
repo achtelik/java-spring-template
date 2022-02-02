@@ -36,6 +36,9 @@ for your use cases.__
 
    ./mvnw spring-boot:run
 
+## Topics
+* [Environment variables](src/main/resources/application.md)
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/achtelik/java-spring-template/edit/gh-pages/index.md) to maintain
