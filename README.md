@@ -39,6 +39,12 @@ for your use cases.__
 ## Topics
 * [Environment variables](src/main/resources/application.md)
 
+## Branches
+This projects has multiple branches. Each branch contains a different topic.
+* __master__: contains all topics.
+* __init__: is the base branch to start new topics.
+* __mongodb__: contains the MongoDB integration.
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/achtelik/java-spring-template/edit/gh-pages/index.md) to maintain
