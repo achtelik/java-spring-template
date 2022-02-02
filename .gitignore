@@ -1,5 +1,6 @@
 ### Custom ###
-docker/mongodb/db
+docker/mongodb/db/*
+!docker/mongodb/db/.gitkeep
 
 ### Default ###
 HELP.md
