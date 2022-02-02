@@ -1,4 +1,5 @@
 # Java Spring Template
+https://achtelik.github.io/java-spring-template
 
 This project combines my personal best practices. I will handle different usecases like:
 
