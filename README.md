@@ -13,8 +13,8 @@ Feel free to use this template and to give feedback.
 
 ## Endpoints
 
-* __Swagger__: http://localhost:8080/backend/swagger-ui.html
-* __Actuator__: Swagger: http://localhost:8080/backend/actuator
+* __Swagger__: [http://localhost:8080/backend/swagger-ui.html](http://localhost:8080/backend/swagger-ui.html)
+* __Actuator__: [http://localhost:8080/backend/actuator](http://localhost:8080/backend/actuator)
 
 ## Structure
 
