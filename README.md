@@ -1,3 +1,7 @@
+---
+permalink: /
+---
+
 # Java Spring Template
 [https://achtelik.github.io/java-spring-template](https://achtelik.github.io/java-spring-template)
 
