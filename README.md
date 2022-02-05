@@ -4,7 +4,7 @@ https://achtelik.github.io/java-spring-template
 This project combines my personal best practices. I will handle different usecases like:
 
 * Project structure
-* Exception handling
+* [Exception handling](src/main/java/it/achtelik/javaspringtemplate/commons/exceptionhandling/ExceptionHandling.md)
 * DB integration and migration with MongoDB
 * OAuth2 authentication
 * ...
