@@ -3,11 +3,13 @@ permalink: /
 ---
 
 # Java Spring Template
+
 [https://achtelik.github.io/java-spring-template](https://achtelik.github.io/java-spring-template)
 
 This project combines my personal best practices. I will handle different usecases like:
 
 * Project structure
+* [Environment variables](src/main/resources/application.md)
 * [Exception handling](src/main/java/it/achtelik/javaspringtemplate/commons/exceptionhandling/ExceptionHandling.md)
 * DB integration and migration with MongoDB
 * OAuth2 authentication
@@ -34,17 +36,18 @@ for your use cases.__
 
 1. Start docker containers.
 
-   docker-compose up
+   ```docker-compose up```
 
-2. Build and run the application.
+2. Set [environment variables](src/main/resources/application.md).
 
-   ./mvnw spring-boot:run
+3. Build and run the application.
 
-## Topics
-* [Environment variables](src/main/resources/application.md)
+   ```./mvnw spring-boot:run```
 
 ## Branches
+
 This projects has multiple branches. Each branch contains a different topic.
+
 * __master__: contains all topics.
 * __init__: is the base branch to start new topics.
 * __mongodb__: contains the MongoDB integration.
