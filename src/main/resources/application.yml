@@ -1,4 +1,8 @@
-server.servlet.context-path: /backend
-management.endpoints.web.base-path: /actuator
+management.endpoint.health.probes.enabled: true
 
 mongock.change-logs-scan-package: it.achtelik.javaspringtemplate.commons.dbmigration.application
+
+server.shutdown: graceful
+spring:
+  webflux:
+    base-path: /backend

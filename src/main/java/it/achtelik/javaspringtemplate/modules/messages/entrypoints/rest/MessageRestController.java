@@ -2,11 +2,11 @@ package it.achtelik.javaspringtemplate.modules.messages.entrypoints.rest;
 
 import it.achtelik.javaspringtemplate.modules.messages.domain.services.IMessageRepositoryAdapter;
 import it.achtelik.javaspringtemplate.modules.messages.domain.models.Message;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/v1/messages")
@@ -24,9 +24,9 @@ public class MessageRestController {
     }
 
     @PutMapping()
-    public Mono<MessagePutResultDto> putMessage(@RequestBody MessagePutDto messagePutDto, HttpServletRequest request) {
+    public Mono<MessagePutResultDto> putMessage(@RequestBody MessagePutDto messagePutDto, ServerHttpRequest request) {
         Mono<Message> result = messageRepositoryAdapter.save(messagePutDtoMapper
-                .toMessage(messagePutDto, request.getRemoteAddr()));
+                .toMessage(messagePutDto, request.getRemoteAddress().getHostString()));
         return result.flatMap(message -> Mono.just(messagePutDtoMapper.toResultDto(message)));
     }
 
