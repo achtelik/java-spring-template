@@ -1,6 +1,6 @@
 package it.achtelik.javaspringtemplate.modules.messages.entrypoints.rest;
 
-import it.achtelik.javaspringtemplate.modules.messages.domain.services.IMessageRepositoryAdapter;
+import it.achtelik.javaspringtemplate.modules.messages.adapters.IMessageRepositoryAdapter;
 import it.achtelik.javaspringtemplate.modules.messages.domain.models.Message;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;

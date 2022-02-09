@@ -1,4 +1,4 @@
-package it.achtelik.javaspringtemplate.modules.messages.domain.services;
+package it.achtelik.javaspringtemplate.modules.messages.adapters;
 
 import it.achtelik.javaspringtemplate.modules.messages.domain.models.Message;
 import reactor.core.publisher.Flux;
