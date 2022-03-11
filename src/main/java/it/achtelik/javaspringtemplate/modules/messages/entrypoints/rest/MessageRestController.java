@@ -9,8 +9,9 @@ import reactor.core.publisher.Mono;
 
 
 @RestController
-@RequestMapping("/v1/messages")
+@RequestMapping(MessageRestController.API_PATH)
 public class MessageRestController {
+    public static final String API_PATH = "/v1/messages";
 
     private final MessageAppService messageAppService;
     private final MessagePutDtoMapper messagePutDtoMapper;
