@@ -1,7 +1,7 @@
 package it.achtelik.javaspringtemplate.modules.messages.dataproviders.mongo;
 
-import it.achtelik.javaspringtemplate.modules.messages.adapters.IMessageRepositoryAdapter;
-import it.achtelik.javaspringtemplate.modules.messages.domain.models.Message;
+import it.achtelik.javaspringtemplate.modules.messages.domains.adapters.IMessageRepositoryAdapter;
+import it.achtelik.javaspringtemplate.modules.messages.domains.models.Message;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

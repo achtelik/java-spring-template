@@ -11,9 +11,9 @@ class LayerCheckArchUnit {
 
     @ArchTest
     public static final ArchRule onionRule = Architectures.onionArchitecture()
-            .domainModels("..domain.models..")
-            .domainServices("..domain.services..")
-            .applicationServices("..application..")
-            .adapter("rest", "..entrypoints.rest..")
-            .adapter("mongo", "..dataproviders.mongo..");
+            .domainModels("..domains.models..")
+            .domainServices("..domains.services..","..domains.adapters..")
+            .applicationServices("..applications.services..")
+            .adapter("rest", "..entrypoints..")
+            .adapter("mongo", "..dataproviders..");
 }

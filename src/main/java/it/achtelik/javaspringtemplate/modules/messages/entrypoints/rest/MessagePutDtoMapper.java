@@ -1,10 +1,9 @@
 package it.achtelik.javaspringtemplate.modules.messages.entrypoints.rest;
 
-import it.achtelik.javaspringtemplate.commons.time.domain.services.TimeService;
-import it.achtelik.javaspringtemplate.modules.messages.domain.models.Message;
+import it.achtelik.javaspringtemplate.shares.time.domains.services.TimeService;
+import it.achtelik.javaspringtemplate.modules.messages.domains.models.Message;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
-import org.jsoup.safety.Whitelist;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;

@@ -1,6 +1,6 @@
 management.endpoint.health.probes.enabled: true
 
-mongock.change-logs-scan-package: it.achtelik.javaspringtemplate.commons.dbmigration.application
+mongock.change-logs-scan-package: it.achtelik.javaspringtemplate.shares.dbmigration.applications
 
 server.shutdown: graceful
 spring:

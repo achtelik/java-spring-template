@@ -1,7 +1,3 @@
----
-permalink: /
----
-
 # Java Spring Template
 
 [https://achtelik.github.io/java-spring-template](https://achtelik.github.io/java-spring-template)
@@ -10,7 +6,7 @@ This project combines my personal best practices. I will handle different usecas
 
 * Project structure
 * [Environment variables](src/main/resources/application.md)
-* [Exception handling](src/main/java/it/achtelik/javaspringtemplate/commons/exceptionhandling/ExceptionHandling.md)
+* [Exception handling](src/main/java/it/achtelik/javaspringtemplate/shares/exceptionhandling/ExceptionHandling.md)
 * DB integration and migration with MongoDB
 * OAuth2 authentication
 * ...
