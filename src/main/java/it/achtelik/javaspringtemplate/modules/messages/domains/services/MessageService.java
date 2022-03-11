@@ -14,7 +14,7 @@ public class MessageService {
         this.messageValidator = messageValidator;
     }
 
-    public Mono<Message> save(Message message) {
+    public Mono<Message> create(Message message) {
         messageValidator.validate(message);
         return messageRepositoryAdapter.save(message);
     }
