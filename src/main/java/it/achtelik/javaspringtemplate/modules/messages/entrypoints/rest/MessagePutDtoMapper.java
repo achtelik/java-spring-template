@@ -2,6 +2,7 @@ package it.achtelik.javaspringtemplate.modules.messages.entrypoints.rest;
 
 import it.achtelik.javaspringtemplate.shares.time.domains.services.TimeService;
 import it.achtelik.javaspringtemplate.modules.messages.domains.models.Message;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
 import org.springframework.stereotype.Component;
@@ -19,7 +20,10 @@ class MessagePutDtoMapper {
     }
 
     public Message toMessage(MessagePutDto dto, String userIp) {
-        return new Message(UUID.randomUUID().toString(), dto.channel(), Jsoup.clean(dto.content(), Safelist.none()), false, timeService.now(),
+        var cleanedChannel = StringUtils.isNotEmpty(dto.channel()) ? Jsoup.clean(dto.channel(), Safelist.none()) : "";
+        var cleanedContent = StringUtils.isNotEmpty(dto.content()) ? Jsoup.clean(dto.content(), Safelist.none()) : "";
+        return new Message(UUID.randomUUID().toString(), cleanedChannel, cleanedContent,
+                false, timeService.now(),
                 "", userIp, Instant.now(), "",
                 userIp);
     }

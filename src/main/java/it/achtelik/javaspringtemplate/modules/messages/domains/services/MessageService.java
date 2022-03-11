@@ -7,12 +7,15 @@ import reactor.core.publisher.Mono;
 
 public class MessageService {
     private final IMessageRepositoryAdapter messageRepositoryAdapter;
+    private final MessageValidator messageValidator;
 
-    public MessageService(IMessageRepositoryAdapter messageRepositoryAdapter) {
+    public MessageService(IMessageRepositoryAdapter messageRepositoryAdapter, MessageValidator messageValidator) {
         this.messageRepositoryAdapter = messageRepositoryAdapter;
+        this.messageValidator = messageValidator;
     }
 
     public Mono<Message> save(Message message) {
+        messageValidator.validate(message);
         return messageRepositoryAdapter.save(message);
     }
 
