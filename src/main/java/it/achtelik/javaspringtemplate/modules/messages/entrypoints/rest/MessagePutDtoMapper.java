@@ -21,8 +21,8 @@ class MessagePutDtoMapper {
 
     public Message toMessage(MessagePutDto dto, String userIp) {
         var cleanedChannel = StringUtils.isNotEmpty(dto.channel()) ? Jsoup.clean(dto.channel(), Safelist.none()) : "";
-        var cleanedContent = StringUtils.isNotEmpty(dto.content()) ? Jsoup.clean(dto.content(), Safelist.none()) : "";
-        return new Message(UUID.randomUUID().toString(), cleanedChannel, cleanedContent,
+        //var cleanedContent = StringUtils.isNotEmpty(dto.content()) ? Jsoup.clean(dto.content(), Safelist.none()) : "";
+        return new Message(UUID.randomUUID().toString(), cleanedChannel, dto.content(),
                 false, timeService.now(),
                 "", userIp, Instant.now(), "",
                 userIp);

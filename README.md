@@ -15,6 +15,7 @@ Feel free to use this template and to give feedback.
 
 ## Endpoints
 
+* __Root__: [http://localhost:8080/backend](http://localhost:8080/backend)
 * __Swagger__: [http://localhost:8080/backend/swagger-ui.html](http://localhost:8080/backend/swagger-ui.html)
 * __Actuator__: [http://localhost:8080/backend/actuator](http://localhost:8080/backend/actuator)
 

@@ -8,8 +8,7 @@ never store username or passwords inside your code. Also references to external 
 An exception could be username and passwords which are used for docker-compose. They are already part of the source
 code.
 
-|Environment variable name|Comment|
-|---|---|
-|SPRING_PROFILES_ACTIVE|_local_ or _cloud_|
-|SPRING_DATA_MONGODB_USERNAME||
-|SPRING_DATA_MONGODB_PASSWORD||
+|Environment variable name| Comment                                               |
+|---|-------------------------------------------------------|
+|SPRING_PROFILES_ACTIVE| local or cloud                                        |
+|SPRING_DATA_MONGODB_URI| mongodb://_username_:_password_@localhost:27017/admin ||

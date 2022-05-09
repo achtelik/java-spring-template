@@ -3,8 +3,8 @@
 From business context it's import to know if the origin of an error is on the client side, or the server side. So it's
 for the most use cases enough, if you make this separation:
 
-* __Application400Exception__: A failure which has his origin at the client side. For example wrong data.
-* __Application500Exception__: Am error at the server side. For example a network error, NullPointer or other Runtime
+* __ApplicationClientException__: A failure which has his origin at the client side. For example wrong data.
+* __ApplicationClientException__: Am error at the server side. For example a network error, NullPointer or other Runtime
   errors.
 
 Also important from technical point of view are the following topics:
