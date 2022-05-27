@@ -6,3 +6,6 @@ server.shutdown: graceful
 spring:
   webflux:
     base-path: /backend
+
+graphql:
+  graphiql.enabled: true

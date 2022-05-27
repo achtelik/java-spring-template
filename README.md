@@ -17,6 +17,8 @@ Feel free to use this template and to give feedback.
 
 * __Root__: [http://localhost:8080/backend](http://localhost:8080/backend)
 * __Swagger__: [http://localhost:8080/backend/swagger-ui.html](http://localhost:8080/backend/swagger-ui.html)
+* __GraphQL__: [http://localhost:8080/backend/graphql](http://localhost:8080/backend/graphql)
+* __GraphiQL__: [http://localhost:8080/backend/graphiql](http://localhost:8080/backend/graphiql)
 * __Actuator__: [http://localhost:8080/backend/actuator](http://localhost:8080/backend/actuator)
 
 ## Structure

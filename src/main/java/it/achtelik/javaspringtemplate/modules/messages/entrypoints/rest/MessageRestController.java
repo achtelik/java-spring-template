@@ -6,12 +6,13 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import it.achtelik.javaspringtemplate.modules.messages.applications.services.MessageAppService;
 import it.achtelik.javaspringtemplate.modules.messages.domains.models.Message;
-import it.achtelik.javaspringtemplate.shares.exceptionhandling.entrypoints.rest.ApplicationErrorWebExceptionHandlerResponseDto;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.time.Instant;
 
 
 @RestController
@@ -34,9 +35,7 @@ public class MessageRestController {
     @Operation(summary = "Create a new message.",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Message created.",
-                            content = @Content(schema = @Schema(implementation = MessagePutResultDto.class))),
-                    @ApiResponse(responseCode = "400", description = "Incomplete or wrong client data.",
-                            content = @Content(schema = @Schema(implementation = ApplicationErrorWebExceptionHandlerResponseDto.class)))}
+                            content = @Content(schema = @Schema(implementation = MessagePutResultDto.class)))}
     )
     public Mono<MessagePutResultDto> putMessage(@RequestBody MessagePutDto messagePutDto, ServerHttpRequest request) {
         Mono<Message> result = messageAppService.create(messagePutDtoMapper
@@ -45,12 +44,18 @@ public class MessageRestController {
     }
 
     @GetMapping()
-    @Operation(summary = "Load messages by parameters.",
+    @Operation(summary = "Load messages by parameters.", description = "This is the super feature search for messages.",
             responses = {
                     @ApiResponse(responseCode = "200", description = "Message created.",
                             content = @Content(schema = @Schema(implementation = MessageGetResultDto.class)))}
     )
-    public Flux<MessageGetResultDto> getMessage() {
+    public Flux<MessageGetResultDto> getMessage(@RequestParam(required = false) String channel,
+                                                @RequestParam(required = false) String content,
+                                                @RequestParam(required = false) Instant createdAtMin,
+                                                @RequestParam(required = false) Instant createdAtMax,
+                                                @RequestParam(required = false, defaultValue = "0") String offset,
+                                                @RequestParam(required = false, defaultValue = "10") Integer limit,
+                                                @RequestParam(required = false) String sort) {
         Flux<Message> results = messageAppService.findAll();
         return results.flatMap(message -> Flux.just(messageGetDtoMapper.toResultDto(message)));
     }
