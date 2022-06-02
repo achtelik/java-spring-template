@@ -11,4 +11,4 @@ code.
 |Environment variable name| Comment                                               |
 |---|-------------------------------------------------------|
 |SPRING_PROFILES_ACTIVE| local or cloud                                        |
-|SPRING_DATA_MONGODB_URI| mongodb://_username_:_password_@localhost:27017/admin ||
+|SPRING_DATA_MONGODB_URI| mongodb://_username_:_password_@localhost:27017/overview?authSource=admin ||
